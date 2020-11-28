@@ -1,0 +1,47 @@
+﻿@page "/"
+
+<h1>FInputs!</h1>
+<EditForm Model="@someModel">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Name</label>
+        <FInputText @ref="fInputText" @bind-Value="@someModel.SomeString" class="form-control" id="exampleFormControlInput1" placeholder="Name" />
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput2">Date</label>
+        <FInputDate @ref="fInputDate" @bind-Value="@someModel.SomeDate" class="form-control" id="exampleFormControlInput2" placeholder="Date" />
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput3">Number</label>
+        <FInputNumber @ref="fInputNumber" @bind-Value="@someModel.SomeNumber" class="form-control" id="exampleFormControlInput3" placeholder="Number" />
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput4">Select</label>
+        <FInputSelect @ref="fInputSelect" @bind-Value="@someModel.SomeSelect" class="form-control" id="exampleFormControlInput4" placeholder="Select" />
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput5">Text</label>
+        <FInputTextArea @ref="fInputTextArea" @bind-Value="@someModel.SomeText" class="form-control" id="exampleFormControlInput5" placeholder="Text" />
+    </div>
+</EditForm>
+
+<button @onclick="@(()=>fInputText.FocusAsync())" class="btn btn-outline-primary">Name</button>
+<button @onclick="@(()=>fInputDate.FocusAsync())" class="btn btn-outline-primary">Date</button>
+<button @onclick="@(()=>fInputNumber.FocusAsync())" class="btn btn-outline-primary">Number</button>
+<button @onclick="@(()=>fInputSelect.FocusAsync())" class="btn btn-outline-primary">Select</button>
+<button @onclick="@(()=>fInputTextArea.FocusAsync())" class="btn btn-outline-primary">Text</button>
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await fInputText.FocusAsync();
+        }
+    }
+
+    SomeModel someModel = new SomeModel();
+    FInputText fInputText;
+    FInputDate<DateTimeOffset> fInputDate;
+    FInputNumber<double> fInputNumber;
+    FInputSelect<string> fInputSelect;
+    FInputTextArea fInputTextArea;
+}

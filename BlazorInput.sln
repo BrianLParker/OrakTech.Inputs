@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorInput", "BlazorInput\BlazorInput.csproj", "{4B6DA0E8-ABA5-4635-9492-84B4BB665175}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrakTech.Inputs", "OrakTech.Inputs\OrakTech.Inputs.csproj", "{809D0CDA-8BEC-4585-A98A-93BD14E9607C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B6DA0E8-ABA5-4635-9492-84B4BB665175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B6DA0E8-ABA5-4635-9492-84B4BB665175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B6DA0E8-ABA5-4635-9492-84B4BB665175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B6DA0E8-ABA5-4635-9492-84B4BB665175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{809D0CDA-8BEC-4585-A98A-93BD14E9607C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{809D0CDA-8BEC-4585-A98A-93BD14E9607C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{809D0CDA-8BEC-4585-A98A-93BD14E9607C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{809D0CDA-8BEC-4585-A98A-93BD14E9607C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20F18FD5-E762-4450-A5F5-305B16431A40}
+	EndGlobalSection
+EndGlobal
