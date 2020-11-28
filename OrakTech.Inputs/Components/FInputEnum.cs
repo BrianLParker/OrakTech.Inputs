@@ -23,9 +23,12 @@
             builder.AddAttribute(2, "class", CssClass);
             builder.AddAttribute(3, "value", BindConverter.FormatValue(CurrentValueAsString));
             builder.AddAttribute(4, "onchange", EventCallback.Factory.CreateBinder<string?>(this, __value => CurrentValueAsString = __value, CurrentValueAsString));
-            foreach (var enumValue in enumValues)
+            if (ChildContent is not null)
             {
-                builder.AddContent(1, ChildContent(enumValue));
+                foreach (var enumValue in enumValues)
+                {
+                    builder.AddContent(1, ChildContent(enumValue));
+                }
             }
             builder.AddElementReferenceCapture(5, (__ref) => { Element = __ref; });
             builder.CloseElement();
