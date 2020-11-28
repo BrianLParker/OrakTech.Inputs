@@ -1,10 +1,6 @@
 # OrakTech.Inputs
 ## Focusable Inputs
 Adds FocusAsync Support `EditForm` inputs.
-`_Imports.razor`
-```
-@using OrakTech.Inputs.Components
-```
 
 ### Inputs Supported
 
@@ -14,8 +10,13 @@ Adds FocusAsync Support `EditForm` inputs.
  - FInputDate<TValue> 
  - FInputSelect<TValue> 
 
+
 ### Usage
+
+
 ```
+@using OrakTech.Inputs.Components
+
 <FInputText @ref="fInputText" @bind-Value="@...  />
 
 <button @onclick="@(()=>fInputText.FocusAsync())">Focus</button>

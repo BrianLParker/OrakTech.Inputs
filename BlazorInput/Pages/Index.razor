@@ -22,6 +22,12 @@
         <label for="exampleFormControlInput5">Text</label>
         <FInputTextArea @ref="fInputTextArea" @bind-Value="@someModel.SomeText" class="form-control" id="exampleFormControlInput5" placeholder="Text" />
     </div>
+     <div class="form-group">
+        <label for="exampleFormControlInput5">Enum</label>
+        <FInputEnum Context="day" @ref="fInputEnum" @bind-Value="@someModel.Day" class="form-control" id="exampleFormControlInput5" placeholder="Text" >
+            <option value="@day">@day</option>
+        </FInputEnum>
+    </div>
 </EditForm>
 
 <button @onclick="@(()=>fInputText.FocusAsync())" class="btn btn-outline-primary">Name</button>
@@ -29,6 +35,7 @@
 <button @onclick="@(()=>fInputNumber.FocusAsync())" class="btn btn-outline-primary">Number</button>
 <button @onclick="@(()=>fInputSelect.FocusAsync())" class="btn btn-outline-primary">Select</button>
 <button @onclick="@(()=>fInputTextArea.FocusAsync())" class="btn btn-outline-primary">Text</button>
+<button @onclick="@(()=>fInputEnum.FocusAsync())" class="btn btn-outline-primary">Enum</button>
 @code {
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -44,4 +51,5 @@
     FInputNumber<double> fInputNumber;
     FInputSelect<string> fInputSelect;
     FInputTextArea fInputTextArea;
+    FInputEnum<DaysOfWeek> fInputEnum;
 }
