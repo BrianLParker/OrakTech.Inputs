@@ -1,4 +1,7 @@
 # OrakTech.Inputs
+
+[![NuGet](https://img.shields.io/badge/NuGet-version%3A%201.0.0.5-blue)](https://www.nuget.org/packages/OrakTech.Inputs/)
+
 ## Focusable Inputs
 Adds FocusAsync Support `EditForm` inputs.
 
