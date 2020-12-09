@@ -1,6 +1,6 @@
 # OrakTech.Inputs
 
-[![NuGet](https://img.shields.io/badge/NuGet-version%3A%201.0.0.5-blue)](https://www.nuget.org/packages/OrakTech.Inputs/)
+[![NuGet](https://img.shields.io/badge/NuGet-version%3A%201.0.0.8-blue)](https://www.nuget.org/packages/OrakTech.Inputs/)
 
 ## Focusable Inputs
 Adds FocusAsync Support `EditForm` inputs.
@@ -39,7 +39,7 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 ```
 
 
-`<FInputEnum />`
+`FInputEnum`
 ```
 <FInputEnum @ref="fInputEnum" @bind-Value="@someModel.Day" />
 ```
@@ -52,4 +52,8 @@ or
 </FInputEnum>
 ```
 
-Note: `Context="day"` prevents a conflict with the `EditForms` "Context" name. Alternately you could rename the `EditForms` context.   `<EditForm Context="someOtherName" ...` 
+Note: Context="day" prevents a conflict with the `EditForms` "Context" name. Alternately you could rename the `EditForms` context.
+
+```
+<EditForm Context="someOtherName" ...
+``` 
