@@ -31,7 +31,18 @@
             {
                 foreach (var enumValue in enumValues)
                 {
+
                     builder.AddContent(1, ChildContent(enumValue));
+                }
+            }
+            else
+            {
+                foreach (var enumValue in enumValues)
+                {
+                    builder.OpenElement(1, "option");
+                    builder.AddAttribute(2, "value", enumValue);
+                    builder.AddContent(3, enumValue);
+                    builder.CloseElement();
                 }
             }
             builder.AddElementReferenceCapture(5, (__ref) => { Element = __ref; });

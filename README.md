@@ -41,7 +41,15 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 `<FInputEnum />`
 ```
+<FInputEnum @ref="fInputEnum" @bind-Value="@someModel.Day" />
+```
+
+or
+
+```
 <FInputEnum Context="day" @ref="fInputEnum" @bind-Value="@someModel.Day"  >
-    <option value="@day">@day</option>
+    <option value="@day"> === @day === </option>
 </FInputEnum>
 ```
+
+Note: `Context="day"` prevents a conflict with the `EditForms` "Context" name. Alternately you could rename the `EditForms` context.   `<EditForm Context="someOtherName" ...` 
